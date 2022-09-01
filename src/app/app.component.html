@@ -2,8 +2,11 @@
   <p>
     Enter Information Here
   </p>
-  <input type="string" (input)="davidInput($any($event.target).value)" />
+  <!-- This is then using event binding "(input)" to pass the input to the value of davidMeathod which is assigned to davidProperty-->
+  <input type="string" (input)="davidMeathod($any($event.target).value)" />
+  <!-- having passed the input of the above HTML element "input" to the davidProperty, we can then use interpolation below to display the value of davidProperty -->
+  <h3> {{ davidProperty }} </h3>
   <p>
-    {{ davidValue }}
+    
   </p>
 </div>

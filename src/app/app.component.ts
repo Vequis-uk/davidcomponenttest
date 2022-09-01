@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  davidValue: string = '';
+  // Created a property here and assigned it to an empty string, to be used below:
+  davidProperty: string = '';
 
-  davidInput(value: string) {
-    this.davidValue = value;
+  // Created a meathod here that is assigning the above property to value, which is a parameter
+  davidMeathod(value: string) {
+    this.davidProperty = value;
   }
 }
