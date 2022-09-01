@@ -3,6 +3,8 @@
     Enter Information Here
   </p>
   <!-- This is then using event binding "(input)" to pass the input to the value of davidMeathod which is assigned to davidProperty-->
+  <!-- I had to look up the "($any($event.target).value)" syntax as I could not remember it, this is due to $event being HTMLElement type, this causes a TS compiler error, solution description below
+  https://www.tektutorialshub.com/angular/property-value-does-not-exist-on-type-eventtarget-error-in-angular/ -->
   <input type="string" (input)="davidMeathod($any($event.target).value)" />
   <!-- having passed the input of the above HTML element "input" to the davidProperty, we can then use interpolation below to display the value of davidProperty -->
   <h3> {{ davidProperty }} </h3>
